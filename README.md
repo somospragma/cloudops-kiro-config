@@ -16,17 +16,17 @@ Configuración centralizada de Kiro CLI para el equipo CloudOps de Pragma. Se in
 
 ### macOS
 ```bash
-curl -sSL https://raw.githubusercontent.com/somospragma/sopp-plugin-monitoring/main/setup/install-macos.sh | bash
+curl -sSL https://raw.githubusercontent.com/somospragma/cloudops-kiro-config/main/setup/install-macos.sh | bash
 ```
 
 ### Linux
 ```bash
-curl -sSL https://raw.githubusercontent.com/somospragma/sopp-plugin-monitoring/main/setup/install-linux.sh | bash
+curl -sSL https://raw.githubusercontent.com/somospragma/cloudops-kiro-config/main/setup/install-linux.sh | bash
 ```
 
 ### Windows (PowerShell Admin)
 ```powershell
-irm https://raw.githubusercontent.com/somospragma/sopp-plugin-monitoring/main/setup/install-windows.ps1 | iex
+irm https://raw.githubusercontent.com/somospragma/cloudops-kiro-config/main/setup/install-windows.ps1 | iex
 ```
 
 ## ¿Cómo funciona?

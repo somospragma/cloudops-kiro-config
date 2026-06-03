@@ -7,3 +7,4 @@ agent list
 mcp list
 /mcp
 Quiero crear un security group abierto a 0.0.0.0/0 en puerto 22" → debería advertirte que viola las reglas de seguridad
+Quiero crear un security group abierto a 0.0.0.0/0 en puerto 22

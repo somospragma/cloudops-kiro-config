@@ -2,7 +2,7 @@
 # Ejecutar UNA sola vez en PowerShell como Administrador.
 $ErrorActionPreference = "Stop"
 
-$RepoUrl = "https://github.com/somospragma/sopp-plugin-monitoring.git"
+$RepoUrl = "https://github.com/somospragma/cloudops-kiro-config.git"
 $KiroDir = "$env:LOCALAPPDATA\pragma-kiro-config"
 
 Write-Host "🔧 Instalando Pragma Kiro Plugin..." -ForegroundColor Cyan

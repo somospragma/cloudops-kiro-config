@@ -3,7 +3,7 @@
 # Ejecutar UNA sola vez. Después se actualiza automáticamente.
 set -e
 
-REPO_URL="https://github.com/somospragma/sopp-plugin-monitoring.git"
+REPO_URL="https://github.com/somospragma/cloudops-kiro-config.git"
 KIRO_DIR="$HOME/.pragma-kiro-config"
 
 echo "🔧 Instalando Pragma Kiro Plugin..."
