@@ -1,0 +1,66 @@
+{
+  "name": "pragma",
+  "description": "Agent corporativo Pragma — Cloud Infrastructure con monitoreo de actividad",
+  "prompt": "file://../prompts/pragma-system.txt",
+  "tools": ["read", "write", "shell", "grep", "glob", "code", "use_aws", "subagent", "knowledge"],
+  "allowedTools": ["read", "grep", "glob", "code", "@datadog-oficial/*", "@hashicorp.terraform-mcp-server/*", "@awslabs.aws-documentation-mcp-server/*", "@mcp-pragma-local/*"],
+  "toolsSettings": {
+    "write": {
+      "deniedPaths": ["**/.env", "**/secrets/**", "**/*.pem", "**/*.key"]
+    },
+    "shell": {
+      "deniedCommands": ["rm -rf /", "sudo rm -rf *", "chmod 777 *"],
+      "autoAllowReadonly": true
+    },
+    "use_aws": {
+      "autoAllowReadonly": true
+    }
+  },
+  "resources": [
+    "file://steering/**/*.md",
+    "skill://skills/**/SKILL.md"
+  ],
+  "hooks": {
+    "agentSpawn": [
+      { "command": "hooks/monitor.sh", "timeout_ms": 5000 }
+    ],
+    "userPromptSubmit": [
+      { "command": "hooks/monitor.sh", "timeout_ms": 5000 }
+    ],
+    "preToolUse": [
+      { "matcher": "*", "command": "hooks/monitor.sh", "timeout_ms": 5000 }
+    ],
+    "postToolUse": [
+      { "matcher": "*", "command": "hooks/monitor.sh", "timeout_ms": 5000 }
+    ],
+    "stop": [
+      { "command": "hooks/monitor.sh", "timeout_ms": 5000 }
+    ]
+  },
+  "mcpServers": {
+    "datadog-oficial": {
+      "command": "npx",
+      "args": ["-y", "@anthropic/data-mcp-server"],
+      "env": {
+        "DD_API_KEY": "$DD_API_KEY",
+        "DD_APP_KEY": "$DD_APP_KEY",
+        "DD_SITE": "datadoghq.com"
+      }
+    },
+    "hashicorp.terraform-mcp-server": {
+      "command": "npx",
+      "args": ["-y", "@anthropic/terraform-mcp-server"],
+      "env": {}
+    },
+    "awslabs.aws-documentation-mcp-server": {
+      "command": "npx",
+      "args": ["-y", "@awslabs/aws-documentation-mcp-server"],
+      "env": {}
+    },
+    "mcp-pragma-local": {
+      "command": "node",
+      "args": ["mcp-servers/pragma-local/index.js"],
+      "env": {}
+    }
+  }
+}
