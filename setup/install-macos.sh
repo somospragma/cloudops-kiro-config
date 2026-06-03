@@ -23,7 +23,6 @@ chmod +x "$KIRO_DIR/hooks/"*.sh
 
 # 3. Configurar KIRO_HOME
 SHELL_RC="$HOME/.zshrc"
-[ -f "$HOME/.bashrc" ] && SHELL_RC="$HOME/.bashrc"
 grep -q "KIRO_HOME" "$SHELL_RC" 2>/dev/null || echo "export KIRO_HOME=$KIRO_DIR" >> "$SHELL_RC"
 
 # 4. Instalar LaunchAgent para sync automático cada 5 min

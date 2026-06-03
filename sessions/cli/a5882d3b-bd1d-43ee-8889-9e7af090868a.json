@@ -2,7 +2,7 @@
   "session_id": "a5882d3b-bd1d-43ee-8889-9e7af090868a",
   "cwd": "/Users/cristian.noguera/Documents/Pragma/CloudOps/IA-CloudOps/SOPP/repos/sopp-plugin-monitoring",
   "created_at": "2026-06-03T17:52:07.885098Z",
-  "updated_at": "2026-06-03T19:31:06.555792Z",
+  "updated_at": "2026-06-03T19:43:29.060422Z",
   "title": "agent list",
   "session_created_reason": "subagent",
   "session_state": {
@@ -344,6 +344,54 @@
               "unitPlural": "credits"
             }
           ]
+        },
+        {
+          "loop_id": {
+            "agent_id": {
+              "name": "kiro_default",
+              "parent_id": null,
+              "rand": null
+            },
+            "rand": 1490713380
+          },
+          "result": {
+            "Ok": {
+              "id": "865e5ff8-ac81-4302-b11c-79c5af0aed38",
+              "role": "assistant",
+              "content": [
+                {
+                  "kind": "text",
+                  "data": "Agentes disponibles:\n\n| Agente | Descripción |\n|--------|-------------|\n| `pragma` | Agent corporativo Pragma — Cloud Infrastructure con monitoreo de actividad |\n| `kiro_default` | Agente por defecto de Kiro CLI |\n| `kiro_planner` | Agente especializado en planificación — descompone ideas en planes de implementación |\n| `kiro_guide` | Agente guía sobre funcionalidades de Kiro CLI usando documentación |\n\n¿Necesitas usar alguno?"
+                }
+              ],
+              "meta": {
+                "timestamp": 1780515808
+              }
+            }
+          },
+          "message_ids": [
+            "9c96fbc2-95af-47d2-a334-8a56cf4d80e4",
+            "de6c3a98-1ebd-4c42-94c7-bf193f2a0d1d"
+          ],
+          "total_request_count": 1,
+          "number_of_cycles": 0,
+          "builtin_tool_uses": 0,
+          "turn_duration": {
+            "secs": 2,
+            "nanos": 976326542
+          },
+          "end_reason": "UserTurnEnd",
+          "end_timestamp": "2026-06-03T19:43:28.997060Z",
+          "input_token_count": 0,
+          "output_token_count": 0,
+          "context_usage_percentage": 1.5482,
+          "metering_usage": [
+            {
+              "value": 0.06327190630182422,
+              "unit": "credit",
+              "unitPlural": "credits"
+            }
+          ]
         }
       ],
       "user_turn_start_request": null,
@@ -355,7 +403,7 @@
         "model_id": "auto",
         "context_window_tokens": 200000
       },
-      "context_usage_percentage": 1.518
+      "context_usage_percentage": 1.5482
     },
     "permissions": {
       "filesystem": {
