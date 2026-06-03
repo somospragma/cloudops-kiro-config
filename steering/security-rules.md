@@ -10,6 +10,7 @@
 - No abrir Security Groups a 0.0.0.0/0 en puertos sensibles (22, 3389, 3306, 5432)
 - Usar VPC endpoints para servicios AWS cuando sea posible
 - Todo tráfico público debe pasar por WAF o CloudFront
+- RDS y Aurora NUNCA deben tener `publicly_accessible = true` — siempre en subnets privadas, acceso solo vía VPN, bastion, o SSM
 
 ## Permisos
 - Principio de menor privilegio: solo los permisos necesarios
